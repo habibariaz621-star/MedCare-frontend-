@@ -20,6 +20,9 @@
 # production
 /build
 
+# local app data (consultation fees until backend supports the field)
+.data/
+
 # misc
 .DS_Store
 *.pem
