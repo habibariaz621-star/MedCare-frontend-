@@ -76,26 +76,28 @@ const facilities = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-x-hidden">
       <div className="brand-blob w-72 h-72 bg-violet-500 top-20 -left-20 animate-float" />
       <div className="brand-blob w-96 h-96 bg-fuchsia-500 top-40 right-0 animate-float-slow" />
 
       {/* Header */}
-      <header className="relative border-b border-violet-200/60 dark:border-violet-900/40 glass-card sticky top-0 z-20 animate-fade-in">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
-              <HeartPulse className="w-5 h-5 text-white" />
+      <header className="relative border-b border-violet-200/60 dark:border-violet-900/40 glass-card sticky top-0 z-20 animate-fade-in overflow-visible">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-3 sm:py-5 flex items-center justify-between gap-2 sm:gap-6 min-w-0">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
+              <HeartPulse className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
-            <div>
-              <p className="text-lg font-bold text-gradient leading-tight">{CLINIC_NAME}</p>
-              <p className="text-[10px] uppercase tracking-widest text-violet-500 dark:text-violet-400 font-semibold">
+            <div className="min-w-0">
+              <p className="text-base sm:text-lg font-bold text-gradient leading-tight truncate">
+                {CLINIC_NAME}
+              </p>
+              <p className="hidden sm:block text-[10px] uppercase tracking-widest text-violet-500 dark:text-violet-400 font-semibold truncate">
                 {CLINIC_SUBTITLE}
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-4 sm:gap-6">
-            <ThemeToggle className="w-10 h-10 shrink-0" />
+          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+            <ThemeToggle className="w-9 h-9 sm:w-10 sm:h-10 shrink-0" />
             <LandingNav />
           </div>
         </div>
@@ -103,13 +105,13 @@ export default function HomePage() {
 
       <main className="relative">
         {/* Hero */}
-        <section className="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        <section className="max-w-6xl mx-auto px-3 sm:px-4 py-10 sm:py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <p className="animate-fade-up text-sm font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-widest mb-3">
                 Trusted Healthcare Since {CLINIC_SINCE}
               </p>
-              <h1 className="animate-fade-up stagger-1 text-4xl md:text-5xl font-bold leading-tight text-slate-900 dark:text-white">
+              <h1 className="animate-fade-up stagger-1 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-slate-900 dark:text-white">
                 Welcome to{' '}
                 <span className="text-gradient">{CLINIC_NAME}</span>
               </h1>
